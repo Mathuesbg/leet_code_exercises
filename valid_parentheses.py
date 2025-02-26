@@ -39,14 +39,12 @@
 # s consists of parentheses only '()[]{}'.
 
 class Solution:
+
     def isValid(self, s: str) -> bool:
 
         temp = []
 
         for char in s:
-                
-            
-
             if char in "{[(":
                 temp.append(char)
             
@@ -62,11 +60,9 @@ class Solution:
             else:
                 return False
             
-        if len(temp) == 0:
-            return True
-        else:
-            return False
+        return len(temp) == 0
+
 
         
 f = Solution()
-print(f.isValid(s= "(){[{}]}[]"))
+print(f.isValid(s= "(){[{[]}]}[]"))
